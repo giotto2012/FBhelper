@@ -77,7 +77,7 @@ class LiveViewController: UIViewController,LFLiveSessionDelegate {
                     FBLiveAPI.shared.loadLiveComment(callback: { (result) in
                         
                         
-                        print("test")
+                        print("test2")
                     })
                 }
                 self.timer?.resume()
