@@ -1,0 +1,6 @@
+module Pods_FBhelper {
+  umbrella header "Pods-FBhelper-umbrella.h"
+
+  export *
+  module * { export * }
+}
