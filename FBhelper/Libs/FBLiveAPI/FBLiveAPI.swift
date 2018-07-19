@@ -19,6 +19,7 @@ enum FBLivePrivacy: StringLiteralType {
 
 class FBLiveAPI {
     typealias CallbackBlock = ((Any) -> Void)
+    typealias ErrorCallbackBlock = ((Any) -> Void)
     var liveVideoId: String?
     
     static let shared = FBLiveAPI()
@@ -70,7 +71,7 @@ class FBLiveAPI {
         }
     }
     
-    func loadLiveComment(callback: @escaping CallbackBlock) {
+    func loadLiveComment(callback: @escaping CallbackBlock,errorCallback: @escaping ErrorCallbackBlock) {
         DispatchQueue.main.async {
             if FBSDKAccessToken.current().hasGranted("publish_video") {
                 let path = "/\(self.liveVideoId ?? "")/comments"
@@ -82,14 +83,47 @@ class FBLiveAPI {
                 )
                 
                 _ = request?.start { (_, result, error) in
+                    
                     if error == nil {
                         
-                        print(result)
+                        let jsonData = self.functionToJSON(object: result!)
                         
-                        callback(result as Any)
+                        let decoder = JSONDecoder()
+                        decoder.dateDecodingStrategy = .iso8601
+                        
+                        print("test:\(jsonData)")
+                        
+                        if let songResults = try?
+                            decoder.decode(FBCommentSwiftBase.self, from: jsonData)
+                        {
+                             callback(songResults)
+
+                        } else {
+                            
+                            let localError = NSError(domain: "", code: 500, userInfo: nil)
+                            errorCallback(localError as Any)
+                        }
+                        
+                    }
+                    else
+                    {
+                        errorCallback(error as Any)
                     }
                 }
             }
         }
+    }
+    func functionToJSON(object:Any) -> Data {
+        /**
+         先判断是否可以转换
+         */
+        if !JSONSerialization.isValidJSONObject(object) {
+            return Data.init()
+        }
+        /**
+         开始转换
+         JSONSerialization.WritingOptions.prettyPrinted 是输出JSON时的格式更容易查看。
+         */
+        return try! JSONSerialization.data(withJSONObject: object, options: .prettyPrinted)
     }
 }

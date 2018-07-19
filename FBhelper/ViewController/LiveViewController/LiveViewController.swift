@@ -8,12 +8,18 @@
 
 import UIKit
 
-class LiveViewController: UIViewController,LFLiveSessionDelegate {
+class LiveViewController: UIViewController,LFLiveSessionDelegate,UITableViewDelegate,UITableViewDataSource {
+    
+    
     @IBOutlet weak var contentView: UIView!
     
     @IBOutlet weak var liveButton: UIButton!
     
     @IBOutlet weak var markView: UIView!
+    
+    @IBOutlet weak var tableview: UITableView!
+
+    
     lazy var session: LFLiveSession = {
         let audioConfiguration = LFLiveAudioConfiguration.default()
         let videoConfiguration = LFLiveVideoConfiguration.defaultConfiguration(for:.low3, outputImageOrientation:.portrait)
@@ -22,12 +28,14 @@ class LiveViewController: UIViewController,LFLiveSessionDelegate {
         
         session?.delegate = self
         session?.preView = self.contentView
-        session?.warterMarkView = markView
+        //session?.warterMarkView = markView
         return session!
     }()
     
     var timer:DispatchSourceTimer?
     
+    
+    var commentObj:FBCommentSwiftBase?
     //var session: VCSimpleSession!
     
     
@@ -47,6 +55,19 @@ class LiveViewController: UIViewController,LFLiveSessionDelegate {
         timer = DispatchSource.makeTimerSource(flags: [], queue: DispatchQueue.main)
         timer?.schedule(deadline: .now(), repeating: 5)
         
+        tableview.register(UINib.init(nibName: "FBLiveTableViewCell", bundle: nil), forCellReuseIdentifier: "FBLiveTableViewCell")
+        
+        tableview.tableFooterView = UIView()
+        
+        self.automaticallyAdjustsScrollViewInsets = false
+        
+        self.edgesForExtendedLayout = []
+
+        if #available(iOS 11.0, *) {
+            tableview.contentInsetAdjustmentBehavior = .never
+        } else {
+            // Fallback on earlier versions
+        }
     }
 
     @IBAction func liveButtonClicked(_ sender: Any) {
@@ -77,14 +98,18 @@ class LiveViewController: UIViewController,LFLiveSessionDelegate {
                     FBLiveAPI.shared.loadLiveComment(callback: { (result) in
                         
                         
-                        print("test2")
+                        self.commentObj = result as? FBCommentSwiftBase
+                        
+                        self.tableview.reloadData()
+                        
+//                        self.tableview.scrollToRow(at: <#T##IndexPath#>, at: UITableViewScrollPosition, animated: <#T##Bool#>)
+                        
+                    },errorCallback:{ (error) in
+                        
+                        
                     })
                 }
                 self.timer?.resume()
-                
-                
-
-
             }
         }
     }
@@ -119,7 +144,38 @@ class LiveViewController: UIViewController,LFLiveSessionDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    //MARK: - TableView
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if commentObj == nil
+        {
+            return 0
+        }
+        else
+        {
+            return (commentObj?.data?.count)!
 
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell:FBLiveTableViewCell = tableView.dequeueReusableCell(withIdentifier: "FBLiveTableViewCell") as! FBLiveTableViewCell
+        
+        
+        let commentListObj:FBComment = (commentObj?.data![indexPath.row])!
+        
+        cell.nameLabel.text = "\(commentListObj.from?.name ?? ""):"
+        
+        cell.messageLabel.text = commentListObj.message
+        
+        
+        return cell
+    }
+    
     /*
     // MARK: - Navigation
 

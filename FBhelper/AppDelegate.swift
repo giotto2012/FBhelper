@@ -24,21 +24,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
 
+//        if @available(iOS 11.0, *)do {
+//            
+//            UITableView.appearance().contentInsetAdju
+//            
+//            
+//            
+//            
+//            
+//            
+//            [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
+//            
+//            UI
+//        }
         
-        if FBSDKAccessToken.current() != nil
-        {
-            let liveVc = LiveViewController()
-            
-            self.window?.rootViewController = liveVc
-        }
-        else
-        {
-            let viewController = LoginViewController()
-            
-            let nav = UINavigationController(rootViewController: viewController)
-            
-            self.window?.rootViewController = nav
-        }
+        let vc = ChatViewController()
+        
+        self.window?.rootViewController = vc
+
+//        if FBSDKAccessToken.current() != nil
+//        {
+//            let liveVc = LiveViewController()
+//
+//            self.window?.rootViewController = liveVc
+//        }
+//        else
+//        {
+//            let viewController = LoginViewController()
+//
+//            let nav = UINavigationController(rootViewController: viewController)
+//
+//            self.window?.rootViewController = nav
+//        }
         
         
         self.window?.makeKeyAndVisible()

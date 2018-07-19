@@ -1,22 +1,34 @@
 PODS:
+  - Kingfisher (4.8.0)
   - LFLiveKit (2.6)
   - NVActivityIndicatorView (4.3.0):
     - NVActivityIndicatorView/Presenter (= 4.3.0)
   - NVActivityIndicatorView/Presenter (4.3.0)
+  - Socket.IO-Client-Swift (13.2.1):
+    - Starscream (~> 3.0.2)
+  - Starscream (3.0.5)
 
 DEPENDENCIES:
+  - Kingfisher (~> 4.0)
   - LFLiveKit
   - NVActivityIndicatorView
+  - Socket.IO-Client-Swift (~> 13.2.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Kingfisher
     - LFLiveKit
     - NVActivityIndicatorView
+    - Socket.IO-Client-Swift
+    - Starscream
 
 SPEC CHECKSUMS:
+  Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
   LFLiveKit: 2219563721f8aa0f188effc3395a06e2d53b23f2
   NVActivityIndicatorView: 963f62bf9f993fcf23218e55958e5b1761b9504c
+  Socket.IO-Client-Swift: b94943e2fb916fe2f95244b9ed21828634002280
+  Starscream: faf918b2f2eff7d5dd21180646bf015a669673bd
 
-PODFILE CHECKSUM: 1b33564abd2cd4ceed0f34fc9b522bfaea393409
+PODFILE CHECKSUM: 8e8ee1f9b00b8c05342e8bd6a95df60d3b72beeb
 
 COCOAPODS: 1.5.3

@@ -11,6 +11,16 @@
 		1C1CAAA420F5AEBD0058FE7D /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1CAAA220F5AEBD0058FE7D /* LiveViewController.swift */; };
 		1C1CAAA520F5AEBD0058FE7D /* LiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C1CAAA320F5AEBD0058FE7D /* LiveViewController.xib */; };
 		1C1CAAA920F5D0540058FE7D /* FBLiveAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1CAAA820F5D0540058FE7D /* FBLiveAPI.swift */; };
+		1C26ED7A20FDC33800EA7AD2 /* FBCommentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C26ED7720FDC33700EA7AD2 /* FBCommentUser.swift */; };
+		1C26ED7B20FDC33800EA7AD2 /* FBComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C26ED7820FDC33700EA7AD2 /* FBComment.swift */; };
+		1C26ED7C20FDC33800EA7AD2 /* FBCommentSwiftBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C26ED7920FDC33700EA7AD2 /* FBCommentSwiftBase.swift */; };
+		1C26ED8220FDD57C00EA7AD2 /* FBLiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C26ED8020FDD57C00EA7AD2 /* FBLiveTableViewCell.swift */; };
+		1C26ED8320FDD57C00EA7AD2 /* FBLiveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C26ED8120FDD57C00EA7AD2 /* FBLiveTableViewCell.xib */; };
+		1C26ED8620FEE0BB00EA7AD2 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C26ED8420FEE0BB00EA7AD2 /* ChatViewController.swift */; };
+		1C26ED8720FEE0BB00EA7AD2 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C26ED8520FEE0BB00EA7AD2 /* ChatViewController.xib */; };
+		1C26ED8A20FF105300EA7AD2 /* CommentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C26ED8920FF105300EA7AD2 /* CommentObject.swift */; };
+		1C26ED8D20FF296A00EA7AD2 /* TestScoketCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C26ED8B20FF296A00EA7AD2 /* TestScoketCommentTableViewCell.swift */; };
+		1C26ED8E20FF296A00EA7AD2 /* TestScoketCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C26ED8C20FF296A00EA7AD2 /* TestScoketCommentTableViewCell.xib */; };
 		1C4D230D20F73BF400FCBFC5 /* testMark.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C4D230C20F73BF400FCBFC5 /* testMark.png */; };
 		1C896E7620F343D400130DAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C896E7520F343D400130DAA /* AppDelegate.swift */; };
 		1C896E7D20F343D500130DAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C896E7C20F343D500130DAA /* Assets.xcassets */; };
@@ -45,6 +55,16 @@
 		1C1CAAA220F5AEBD0058FE7D /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		1C1CAAA320F5AEBD0058FE7D /* LiveViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveViewController.xib; sourceTree = "<group>"; };
 		1C1CAAA820F5D0540058FE7D /* FBLiveAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBLiveAPI.swift; sourceTree = "<group>"; };
+		1C26ED7720FDC33700EA7AD2 /* FBCommentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBCommentUser.swift; sourceTree = "<group>"; };
+		1C26ED7820FDC33700EA7AD2 /* FBComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBComment.swift; sourceTree = "<group>"; };
+		1C26ED7920FDC33700EA7AD2 /* FBCommentSwiftBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBCommentSwiftBase.swift; sourceTree = "<group>"; };
+		1C26ED8020FDD57C00EA7AD2 /* FBLiveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBLiveTableViewCell.swift; sourceTree = "<group>"; };
+		1C26ED8120FDD57C00EA7AD2 /* FBLiveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FBLiveTableViewCell.xib; sourceTree = "<group>"; };
+		1C26ED8420FEE0BB00EA7AD2 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		1C26ED8520FEE0BB00EA7AD2 /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		1C26ED8920FF105300EA7AD2 /* CommentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentObject.swift; sourceTree = "<group>"; };
+		1C26ED8B20FF296A00EA7AD2 /* TestScoketCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScoketCommentTableViewCell.swift; sourceTree = "<group>"; };
+		1C26ED8C20FF296A00EA7AD2 /* TestScoketCommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestScoketCommentTableViewCell.xib; sourceTree = "<group>"; };
 		1C4D230C20F73BF400FCBFC5 /* testMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testMark.png; sourceTree = "<group>"; };
 		1C896E7220F343D400130DAA /* FBhelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBhelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C896E7520F343D400130DAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +142,59 @@
 			path = FBLiveAPI;
 			sourceTree = "<group>";
 		};
+		1C26ED7520FDC2D800EA7AD2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1C26ED7620FDC2E600EA7AD2 /* FBLive */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1C26ED7620FDC2E600EA7AD2 /* FBLive */ = {
+			isa = PBXGroup;
+			children = (
+				1C26ED7820FDC33700EA7AD2 /* FBComment.swift */,
+				1C26ED7720FDC33700EA7AD2 /* FBCommentUser.swift */,
+				1C26ED7920FDC33700EA7AD2 /* FBCommentSwiftBase.swift */,
+				1C26ED8920FF105300EA7AD2 /* CommentObject.swift */,
+			);
+			path = FBLive;
+			sourceTree = "<group>";
+		};
+		1C26ED7D20FDD3BD00EA7AD2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1C26ED7E20FDD3C600EA7AD2 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1C26ED7E20FDD3C600EA7AD2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1C26ED7F20FDD55F00EA7AD2 /* FBLive */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		1C26ED7F20FDD55F00EA7AD2 /* FBLive */ = {
+			isa = PBXGroup;
+			children = (
+				1C26ED8020FDD57C00EA7AD2 /* FBLiveTableViewCell.swift */,
+				1C26ED8120FDD57C00EA7AD2 /* FBLiveTableViewCell.xib */,
+				1C26ED8B20FF296A00EA7AD2 /* TestScoketCommentTableViewCell.swift */,
+				1C26ED8C20FF296A00EA7AD2 /* TestScoketCommentTableViewCell.xib */,
+			);
+			path = FBLive;
+			sourceTree = "<group>";
+		};
+		1C26ED8820FEE16B00EA7AD2 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		1C4D230B20F73BE500FCBFC5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +228,9 @@
 		1C896E7420F343D400130DAA /* FBhelper */ = {
 			isa = PBXGroup;
 			children = (
+				1C26ED8820FEE16B00EA7AD2 /* API */,
+				1C26ED7D20FDD3BD00EA7AD2 /* View */,
+				1C26ED7520FDC2D800EA7AD2 /* Model */,
 				1C4D230B20F73BE500FCBFC5 /* Resources */,
 				1C1CAAA620F5D0380058FE7D /* Libs */,
 				1C896EAA20F3447A00130DAA /* ViewController */,
@@ -201,6 +277,8 @@
 			children = (
 				1C1CAAA120F5A37A0058FE7D /* LiveViewController */,
 				1C896EAB20F3447A00130DAA /* LoginViewController */,
+				1C26ED8420FEE0BB00EA7AD2 /* ChatViewController.swift */,
+				1C26ED8520FEE0BB00EA7AD2 /* ChatViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -339,7 +417,10 @@
 			files = (
 				1C896EAF20F3447A00130DAA /* LoginViewController.xib in Resources */,
 				1C896E8020F343D500130DAA /* LaunchScreen.storyboard in Resources */,
+				1C26ED8E20FF296A00EA7AD2 /* TestScoketCommentTableViewCell.xib in Resources */,
+				1C26ED8720FEE0BB00EA7AD2 /* ChatViewController.xib in Resources */,
 				1C1CAAA520F5AEBD0058FE7D /* LiveViewController.xib in Resources */,
+				1C26ED8320FDD57C00EA7AD2 /* FBLiveTableViewCell.xib in Resources */,
 				1C4D230D20F73BF400FCBFC5 /* testMark.png in Resources */,
 				1C896E7D20F343D500130DAA /* Assets.xcassets in Resources */,
 			);
@@ -388,9 +469,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C1CAAA920F5D0540058FE7D /* FBLiveAPI.swift in Sources */,
+				1C26ED7B20FDC33800EA7AD2 /* FBComment.swift in Sources */,
 				1C896EAE20F3447A00130DAA /* LoginViewController.swift in Sources */,
 				1C1CAAA420F5AEBD0058FE7D /* LiveViewController.swift in Sources */,
+				1C26ED7A20FDC33800EA7AD2 /* FBCommentUser.swift in Sources */,
+				1C26ED8D20FF296A00EA7AD2 /* TestScoketCommentTableViewCell.swift in Sources */,
+				1C26ED7C20FDC33800EA7AD2 /* FBCommentSwiftBase.swift in Sources */,
+				1C26ED8A20FF105300EA7AD2 /* CommentObject.swift in Sources */,
 				1C896E7620F343D400130DAA /* AppDelegate.swift in Sources */,
+				1C26ED8620FEE0BB00EA7AD2 /* ChatViewController.swift in Sources */,
+				1C26ED8220FDD57C00EA7AD2 /* FBLiveTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

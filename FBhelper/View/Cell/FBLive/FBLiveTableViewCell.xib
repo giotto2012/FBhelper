@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="FBLiveTableViewCell" customModule="FBhelper" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fU5-WH-evs">
+                        <rect key="frame" x="12" y="14.5" width="31" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQw-A1-AJV">
+                        <rect key="frame" x="51" y="13.5" width="257" height="17"/>
+                        <string key="text">LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="UQw-A1-AJV" firstAttribute="leading" secondItem="fU5-WH-evs" secondAttribute="trailing" constant="8" id="I5e-6z-iWn"/>
+                    <constraint firstItem="fU5-WH-evs" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Oia-RZ-jfH"/>
+                    <constraint firstItem="fU5-WH-evs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="YDX-IW-Ql3"/>
+                    <constraint firstItem="UQw-A1-AJV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13.5" id="kFm-gy-0SG"/>
+                    <constraint firstAttribute="trailing" secondItem="UQw-A1-AJV" secondAttribute="trailing" constant="12" id="vp0-mF-Dnc"/>
+                    <constraint firstAttribute="bottom" secondItem="UQw-A1-AJV" secondAttribute="bottom" constant="13" id="zK6-XH-F9Y"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="messageLabel" destination="UQw-A1-AJV" id="FqY-B1-53V"/>
+                <outlet property="nameLabel" destination="fU5-WH-evs" id="2UM-QS-w2N"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
